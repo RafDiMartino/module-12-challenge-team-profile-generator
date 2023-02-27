@@ -26,9 +26,10 @@ The following screenshot shows an example of the generated html file:
 ![application screenshot](./assets/images/application-screenshot.png)
 
 ## Test
-To run the test
+This application uses [Jest.js](https://jestjs.io/) for unit testing,
+to run the Jest tests, open the terminal, navigate to the root folder of the project and run `npm run test`
 
-The following screenshot shows an example of the generated html file:
+The following screenshot shows test results:
 ![test results screenshot](./assets/images/test-screenshot.png)
 
 ## License
