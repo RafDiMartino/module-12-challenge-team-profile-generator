@@ -80,7 +80,7 @@ const generateTeam = team => {
 }
 
 // exports function to generate entire page
-const team = team => {
+const render = team => {
 
     return `
     <!DOCTYPE html>
@@ -117,4 +117,4 @@ const team = team => {
     `;
 };
 
-export {team};
+export { render };

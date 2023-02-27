@@ -6,14 +6,12 @@ import { Intern } from "./lib/Intern.js";
 // Import questions 
 import { managerQuestions, engineerQuestions, internQuestions, teamMemberList } from "./src/questions.js";
 
+// Import render function
+import { render } from "./src/page-template.js";
+
 import inquirer from "inquirer";
-import path from "path";
 import fs from "fs";
 
-const OUTPUT_DIR = path.resolve("output");
-const outputPath = path.join(OUTPUT_DIR, "team.html");
-
-import { team } from "./src/page-template.js";
 
 const employeeList = [];
 
@@ -63,10 +61,15 @@ function addNewTeamMember(){
         } else if (answer.newTeamMember === 'Intern') {
             addIntern();
         } else {
-            //finish the program
-            return
+            // Finish the program and write to file
+            writeToFile(employeeList)
         }
     });
+}
+
+function writeToFile(employeeList) {
+    fs.mkdir("./output", { recursive: true }, (err) => {if (err) throw err;})
+    fs.writeFile(`./output/team.html`, render(employeeList), (err) => err ? console.error(err) : console.log("Success! You Team member landing page has been generated in the output folder"));
 }
 
 function init(){
