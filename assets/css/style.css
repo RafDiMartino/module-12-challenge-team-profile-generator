@@ -1,0 +1,88 @@
+body {
+    background: rgb(237, 237, 237);
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    color:  #006ADB;
+}
+
+h1 {
+    color: #fff;
+}
+
+h2 {
+    padding: 1rem 1.3rem 0 1.3rem;
+    margin: 0 !important;
+    color: #fff;
+}
+
+h3 {
+    font-weight: normal;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    padding: 1rem 1.3rem 2rem 1.3rem;
+    margin: 0 !important;
+    color: #fff;
+}
+
+.jumbotron {
+    background: rgb(181, 94, 0);
+    border-radius: 0;
+    border-bottom: 2px solid rgba(17, 17, 26, 0.569);
+}
+
+.container {
+    margin: 5rem 0;
+}
+
+.team-area {
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+.fas {
+    color: rgb(255, 255, 255);
+    margin: 0 1rem 0 0 !important;
+}
+
+.employee-card {
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    min-width: 300px;
+}
+
+.card-header-manager {
+    background: rgb(0, 105, 216);
+    border-radius: .25rem .25rem 0 0;
+}
+
+.card-header-engineer {
+    background: rgb(216, 0, 0);
+    border-radius: .25rem .25rem 0 0;
+}
+
+.card-header-intern {
+    background: rgb(11, 131, 0);
+    border-radius: .25rem .25rem 0 0;
+}
+
+footer {
+    border-top: 2px solid rgba(17, 17, 26, 0.569);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: rgb(181, 94, 0);
+    color: #fff;
+}
+
+footer p {
+    margin: 0;
+}
