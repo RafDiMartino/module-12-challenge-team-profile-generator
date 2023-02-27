@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "edX Bootcamp Module 12 Challenge - Team Profile Generator",
   "main": "index.js",
+  "type": "module",
   "directories": {
     "lib": "lib"
   },
