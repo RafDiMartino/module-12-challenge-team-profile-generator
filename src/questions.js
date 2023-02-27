@@ -6,7 +6,7 @@ const managerQuestions = [
         message: "Enter the manager's name:",
         validate: (answer) => {
             if (answer === "") {
-                return console.log("Enter a valid name");
+                return "Enter a valid name";
             }
             return true;
         }
@@ -16,8 +16,8 @@ const managerQuestions = [
         name: "id",
         message: "Enter the manager's employee ID:",
         validate: (answer) => {
-            if (answer === "") {
-                return console.log("Enter a valid ID number");
+            if (!(/^\d+$/.test(answer))) {
+                return "Enter a valid ID number";
             }
             return true;
         }
@@ -26,11 +26,11 @@ const managerQuestions = [
         type: "input",
         name: "email",
         message: "Enter the manager's email address:",
-        validate: (answer) => {
-            if (answer === "") {
-                return console.log("Enter a valid email address");
+        validate: (answer) =>{  
+            if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(answer))) {
+                return "Enter a valid email address"
             }
-            return true;
+            return true
         }
     },
     {
@@ -38,8 +38,8 @@ const managerQuestions = [
         name: "officeNumber",
         message: "Enter the manager's office number:",
         validate: (answer) => {
-            if (answer === "") {
-                return console.log("Enter a valid office number");
+            if (!(/^\d+$/.test(answer))) {
+                return "Enter a valid ID number";
             }
             return true;
         }
@@ -54,7 +54,7 @@ const engineerQuestions = [
         message: "Enter the engineer's name:",
         validate: (answer) => {
             if (answer === "") {
-                return console.log("Enter a valid name");
+                return "Enter a valid name";
             }
             return true;
         }
@@ -64,8 +64,8 @@ const engineerQuestions = [
         name: "id",
         message: "Enter the engineer's employee ID:",
         validate: (answer) => {
-            if (answer === "") {
-                return console.log("Enter a valid ID number");
+            if (!(/^\d+$/.test(answer))) {
+                return "Enter a valid ID number";
             }
             return true;
         }
@@ -74,11 +74,11 @@ const engineerQuestions = [
         type: "input",
         name: "email",
         message: "Enter the engineer's email address:",
-        validate: (answer) => {
-            if (answer === "") {
-                return console.log("Enter a valid email address");
+        validate: (email) =>{  
+            if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))) {
+                return "Enter a valid email address"
             }
-            return true;
+            return true
         }
     },
     {
@@ -87,7 +87,7 @@ const engineerQuestions = [
         message: "Enter the engineer's github profile:",
         validate: (answer) => {
             if (answer === "") {
-                return console.log("Enter a valid github profile");
+                return "Enter a valid github profile";
             }
             return true;
         }
@@ -102,7 +102,7 @@ const internQuestions = [
         message: "Enter the intern's name:",
         validate: (answer) => {
             if (answer === "") {
-                return console.log("Enter a valid name");
+                return "Enter a valid name";
             }
             return true;
         }
@@ -112,8 +112,8 @@ const internQuestions = [
         name: "id",
         message: "Enter the intern's employee ID:",
         validate: (answer) => {
-            if (answer === "") {
-                return console.log("Enter a valid ID number");
+            if (!(/^\d+$/.test(answer))) {
+                return "Enter a valid ID number";
             }
             return true;
         }
@@ -122,11 +122,11 @@ const internQuestions = [
         type: "input",
         name: "email",
         message: "Enter the intern's email address:",
-        validate: (answer) => {
-            if (answer === "") {
-                return console.log("Enter a valid email address");
+        validate: (email) =>{  
+            if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))) {
+                return "Enter a valid email address"
             }
-            return true;
+            return true
         }
     },
     {
@@ -135,7 +135,7 @@ const internQuestions = [
         message: "Enter the intern's school name:",
         validate: (answer) => {
             if (answer === "") {
-                return console.log("Enter a valid school name");
+                return "Enter a valid school name";
             }
             return true;
         }
