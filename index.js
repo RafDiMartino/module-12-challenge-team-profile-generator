@@ -10,6 +10,7 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 import { team } from "./src/page-template.js";
 import { managerQuestions } from "./src/questions.js";
+import { engineerQuestions } from "./src/questions.js";
 
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
 
@@ -27,8 +28,19 @@ function addManager() {
     });
 }
 
+function addEngineer() {
+    inquirer
+        .prompt(engineerQuestions)
+        .then((answers) => {
+            const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
+            console.table(engineer);
+            employeeList.push(engineer);
+    });
+}
+
 function init(){
-    addManager()
+    // addManager()
+    addEngineer()
 }
 
 init()
