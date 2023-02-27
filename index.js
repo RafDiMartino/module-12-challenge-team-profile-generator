@@ -25,7 +25,7 @@ function addManager() {
             const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber);
             console.table(manager);
             employeeList.push(manager);
-            
+            addNewTeamMember()
     });
 }
 
@@ -37,6 +37,7 @@ function addEngineer() {
             const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
             console.table(engineer);
             employeeList.push(engineer);
+            addNewTeamMember()
     });
 }
 
@@ -48,6 +49,7 @@ function addIntern() {
             const engineer = new Intern(answers.name, answers.id, answers.email, answers.school);
             console.table(engineer);
             employeeList.push(engineer);
+            addNewTeamMember()
     });
 }
 
@@ -68,12 +70,7 @@ function addNewTeamMember(){
 }
 
 function init(){
-    // addManager()
-    // addEngineer()
-    // addIntern()
-    addNewTeamMember()
+    addManager()
 }
-
-
 
 init()
