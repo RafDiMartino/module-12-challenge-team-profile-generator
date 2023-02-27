@@ -2,9 +2,9 @@
 
 ## Description
 
-In thins challenge I had to create an application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person.
+In this challenge I created an application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person.
 The Application is using [Inquirer.js](https://www.npmjs.com/package/inquirer) for gathering user's inputs and [Jest.js](https://jestjs.io/)
-for test driven development, the application is built in node.js and uses ES6 sintax.
+for unit testing, the program is built in node.js and uses ES6 sintax.
 
 ## Table of contents
 * [Installation](#installation)
@@ -20,7 +20,7 @@ After the installation instructions, in the terminal, run `node index.js`, you w
 
 You can exit the program by choosing `Complete the team and generate the landing page` from the list of options or by pressing `ctrl + c`.
 
-At the end of the program, from your answers a `team.html` will be generated in the folder `output`
+At the end of the program, from your answers a `team.html` file will be generated in the folder `output`
 
 The following screenshot shows an example of the generated html file:
 ![application screenshot](./assets/images/application-screenshot.png)
