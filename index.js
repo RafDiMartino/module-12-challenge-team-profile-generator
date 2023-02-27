@@ -9,6 +9,26 @@ const OUTPUT_DIR = path.resolve("output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 import { team } from "./src/page-template.js";
-
+import { managerQuestions } from "./src/questions.js";
 
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
+
+const employeeList = [];
+
+// Gets the data for the manager team member
+function addManager() {
+    inquirer
+        .prompt(managerQuestions)
+        .then((answers) => {
+            const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber);
+            console.table(manager);
+            employeeList.push(manager);
+            
+    });
+}
+
+function init(){
+    addManager()
+}
+
+init()
