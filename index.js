@@ -1,6 +1,13 @@
+//Import classes
 import { Manager } from "./lib/Manager.js";
 import { Engineer } from "./lib/Engineer.js";
 import { Intern } from "./lib/Intern.js";
+
+// Import questions 
+import { managerQuestions } from "./src/questions.js";
+import { engineerQuestions } from "./src/questions.js";
+import { internQuestions } from "./src/questions.js";
+
 import inquirer from "inquirer";
 import path from "path";
 import fs from "fs";
@@ -9,14 +16,10 @@ const OUTPUT_DIR = path.resolve("output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 import { team } from "./src/page-template.js";
-import { managerQuestions } from "./src/questions.js";
-import { engineerQuestions } from "./src/questions.js";
-
-// TODO: Write Code to gather information about the development team members, and render the HTML file.
 
 const employeeList = [];
 
-// Gets the data for the manager team member
+// Generate the data for the manager team member
 function addManager() {
     inquirer
         .prompt(managerQuestions)
@@ -28,6 +31,7 @@ function addManager() {
     });
 }
 
+// Generate the data for the engineer team member
 function addEngineer() {
     inquirer
         .prompt(engineerQuestions)
@@ -38,9 +42,21 @@ function addEngineer() {
     });
 }
 
+// Generate the data for the intern team member
+function addIntern() {
+    inquirer
+        .prompt(internQuestions)
+        .then((answers) => {
+            const engineer = new Intern(answers.name, answers.id, answers.email, answers.school);
+            console.table(engineer);
+            employeeList.push(engineer);
+    });
+}
+
 function init(){
     // addManager()
-    addEngineer()
+    // addEngineer()
+    addIntern()
 }
 
 init()

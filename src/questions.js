@@ -46,6 +46,7 @@ const managerQuestions = [
     },
 ]
 
+// Questions for the engineer team member
 const engineerQuestions = [
     {
         type: "input",
@@ -91,6 +92,54 @@ const engineerQuestions = [
             return true;
         }
     },
+]
+
+// Questions for the intern team member
+const internQuestions = [
+    {
+        type: "input",
+        name: "name",
+        message: "Enter the intern's name:",
+        validate: (answer) => {
+            if (answer === "") {
+                return console.log("Enter a valid name");
+            }
+            return true;
+        }
+    },
+    {
+        type: "input",
+        name: "id",
+        message: "Enter the intern's employee ID:",
+        validate: (answer) => {
+            if (answer === "") {
+                return console.log("Enter a valid ID number");
+            }
+            return true;
+        }
+    },
+    {
+        type: "input",
+        name: "email",
+        message: "Enter the intern's email address:",
+        validate: (answer) => {
+            if (answer === "") {
+                return console.log("Enter a valid email address");
+            }
+            return true;
+        }
+    },
+    {
+        type: "input",
+        name: "school",
+        message: "Enter the intern's school name:",
+        validate: (answer) => {
+            if (answer === "") {
+                return console.log("Enter a valid school name");
+            }
+            return true;
+        }
+    },
 ] 
 
-export { managerQuestions, engineerQuestions }
+export { managerQuestions, engineerQuestions, internQuestions }
