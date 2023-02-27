@@ -4,9 +4,7 @@ import { Engineer } from "./lib/Engineer.js";
 import { Intern } from "./lib/Intern.js";
 
 // Import questions 
-import { managerQuestions } from "./src/questions.js";
-import { engineerQuestions } from "./src/questions.js";
-import { internQuestions } from "./src/questions.js";
+import { managerQuestions, engineerQuestions, internQuestions, teamMemberList } from "./src/questions.js";
 
 import inquirer from "inquirer";
 import path from "path";
@@ -53,10 +51,29 @@ function addIntern() {
     });
 }
 
+// Generate the prompt to add a new team member
+function addNewTeamMember(){
+    inquirer
+    .prompt(teamMemberList)
+    .then((answer) => {
+        if (answer.newTeamMember === 'Engineer') {
+            addEngineer();
+        } else if (answer.newTeamMember === 'Intern') {
+            addIntern();
+        } else {
+            //finish the program
+            return
+        }
+    });
+}
+
 function init(){
     // addManager()
     // addEngineer()
-    addIntern()
+    // addIntern()
+    addNewTeamMember()
 }
+
+
 
 init()

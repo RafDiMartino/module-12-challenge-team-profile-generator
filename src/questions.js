@@ -142,4 +142,13 @@ const internQuestions = [
     },
 ] 
 
-export { managerQuestions, engineerQuestions, internQuestions }
+const teamMemberList = [
+    {
+        type: 'list',
+        name: 'newTeamMember',
+        message: 'Add an engineer, Add an intern or Complete the team and generate the landing page',
+        choices: ['Engineer', 'Intern', 'Complete the team and generate landing page'],
+    }
+]
+
+export { managerQuestions, engineerQuestions, internQuestions, teamMemberList }
